@@ -1,0 +1,14 @@
+{
+  "industryExperience": {
+    "industryExperienceText": "17+",
+    "industryExperienceStyle": {
+      "fontSize": "40px",
+      "fontWeight": "300",
+      "color": "rgb(82, 206, 147)"
+    }
+  },
+
+  "saaSProducts": "11",
+  "airportsWorldwide": "60+",
+  "usersWorldwide": "300k"
+}
