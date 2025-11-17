@@ -1,4 +1,5 @@
-import HomePage from "../../pages/homePage";
+import HomePage from "../../pages/part1Pages/homePage";
+import ContactPage from "../../pages/part1Pages/contactPage";
 
 describe("social media links", () => {
   beforeEach(() => {
@@ -45,5 +46,28 @@ describe("social media links", () => {
       .linkedInLink()
       .should("have.attr", "href")
       .and("contain", "linkedin.com"); //verify LinkedIn link domain
+  });
+});
+
+describe("navigation to Contact page", () => {
+  beforeEach(() => {
+    cy.visit("https://airportlabs.com");
+    HomePage.elements.contactButtonNav().click();
+    // cy.url().then((currentUrl) => {
+    //   const expectedUrl = "https://airportlabs.com/other/get-in-touch";
+
+    //   if (currentUrl !== expectedUrl) {
+    //     this.skip();
+    //   }
+    // });
+  });
+  it("should navigate to Contact page when 'Contact' button is clicked", () => {
+    cy.url().should("include", "/other/get-in-touch");
+  });
+  // because I don't want to repeat code and violate the DRY principle I will assume the previous test will never file but a better solution would be to create a guard clause that would stop the next tests from running if the navigation test failed, I would implement that with a skip in the before each after checking the url
+  it("should have correct title on Contact page after navigation", () => {
+    ContactPage.elements
+      .contactPageTitle()
+      .should("have.text", "Let's get in touch");
   });
 });

@@ -8,12 +8,15 @@ class HomePage {
     ourActivityinNumbersSection: () => cy.get(".our-impact"),
     industryExperienceText: () =>
       cy.get("h4:contains('Industry Experience')").siblings("h2"),
+    industryExperienceLabel: () => cy.get("h4:contains('Industry Experience')"),
     saaSProductsText: () =>
       cy.get("h4:contains('SaaS Products')").siblings("h2"),
     airportsWorldwideText: () =>
       cy.get("h4:contains('Airports Worldwide')").siblings("h2"),
     usersWorldwideText: () =>
       cy.get("h3:contains('Users Worldwide')").siblings("h2"), //h3 because of the bug described in the test file, I could have gone for the class of ".h4" as well but this is more descriptive
+
+    contactButtonNav: () => cy.get('nav > a[href*="get-in-touch"]'),
   };
 
   verifyTitleIs(expected) {

@@ -1,4 +1,4 @@
-import HomePage from "../../pages/homePage";
+import HomePage from "../../pages/part1Pages/homePage";
 
 describe("'Our Activity in Numbers' section tests", () => {
   beforeEach(function () {
@@ -12,7 +12,7 @@ describe("'Our Activity in Numbers' section tests", () => {
     HomePage.elements.ourActivityinNumbersSection().scrollIntoView();
     HomePage.elements.ourActivityinNumbersSection().should("be.visible");
   });
-  it("should have the correct label and style for 'Indusrtry Experience' ", function () {
+  it("should have the correct style for 'Indusrtry Experience' ", function () {
     HomePage.elements
       .industryExperienceText()
       .should(
@@ -29,6 +29,14 @@ describe("'Our Activity in Numbers' section tests", () => {
         "have.css",
         "color",
         this.content.industryExperience.industryExperienceStyle.color
+      );
+  });
+  it("should have the correct label for 'Indusrtry Experience' ", function () {
+    HomePage.elements
+      .industryExperienceLabel()
+      .should(
+        "have.text",
+        this.content.industryExperience.industryExperienceLabel
       );
   });
   it("should have correct content in 'Our Activity in Numbers' section - spec 'Industry Experience' ", function () {
