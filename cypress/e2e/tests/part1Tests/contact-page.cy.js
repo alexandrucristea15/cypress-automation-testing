@@ -20,7 +20,7 @@ describe("contact form validation tests", () => {
   //So I will skip that test for now and test for the correct data being shown in the Office Locations section instead as a placeholder for a more complex form submission test
   it("should have correct office location information", () => {
     ContactPage.elements.officeLocationsSection().should("be.visible");
-    cy.fixture("contact-page").then((data) => {
+    cy.fixture("part1Fixtures/contact-page").then((data) => {
       const locations = data.locations;
       ContactPage.elements
         .officeLocationsSection()

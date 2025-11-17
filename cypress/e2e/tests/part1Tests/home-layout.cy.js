@@ -1,4 +1,4 @@
-import HomePage from "../../pages/homePage";
+import HomePage from "../../pages/part1Pages/homePage";
 
 beforeEach(() => {
   cy.visit("https://airportlabs.com");

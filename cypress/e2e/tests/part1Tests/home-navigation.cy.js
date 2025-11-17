@@ -16,7 +16,7 @@ describe("social media links", () => {
   });
 
   it("should have correct href attributes for social media links", () => {
-    cy.fixture("home-navigation").then((links) => {
+    cy.fixture("part1Fixtures/home-navigation").then((links) => {
       HomePage.elements
         .facebookLink()
         .should("have.attr", "href", links.facebookLink); //verify Facebook link URL correctness
