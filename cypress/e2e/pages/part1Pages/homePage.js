@@ -14,7 +14,7 @@ class HomePage {
     airportsWorldwideText: () =>
       cy.get("h4:contains('Airports Worldwide')").siblings("h2"),
     usersWorldwideText: () =>
-      cy.get("h3:contains('Users Worldwide')").siblings("h2"), //h3 because of the bug described in the test file, I could have gone for the class of ".h4" as well but this is more descriptive
+      cy.get("h3:contains('Users Worldwide')").siblings("h2"), // h3 because of the bug described in the test file, I could have gone for the class of ".h4" as well but this is more descriptive
 
     contactButtonNav: () => cy.get('nav > a[href*="get-in-touch"]'),
   };

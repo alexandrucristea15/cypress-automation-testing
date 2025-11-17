@@ -30,7 +30,7 @@ describe("Logo tests", () => {
   });
 
   it("should logo dimension not be less than or equal to 0", () => {
-    //I used negative assertion to verify that logo dimensions are greater than 0, even though there is a much simpler way of checking by usign 'be.greaterThan' assertion
+    // I used negative assertion to verify that logo dimensions are greater than 0, even though there is a much simpler way of checking by usign 'be.greaterThan' assertion
 
     // HomePage.elements.logoImage().then((logo) => {
     //   const logoWidth = logo[0].naturalWidth;
