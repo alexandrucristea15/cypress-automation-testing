@@ -1,9 +1,9 @@
-import HomePage from "../../pages/part1Pages/homePage";
-import ContactPage from "../../pages/part1Pages/contactPage";
+import HomePage from "../../pages/websitePages/homePage";
+import ContactPage from "../../pages/websitePages/contactPage";
 
 describe("social media links", () => {
   beforeEach(() => {
-    cy.visit("https://airportlabs.com");
+    cy.visit('/');
   });
 
   it("should have social media links visible", () => {
@@ -16,7 +16,7 @@ describe("social media links", () => {
   });
 
   it("should have correct href attributes for social media links", () => {
-    cy.fixture("part1Fixtures/home-navigation").then((links) => {
+    cy.fixture("websiteFixtures/home-navigation").then((links) => {
       HomePage.elements
         .facebookLink()
         .should("have.attr", "href", links.facebookLink); // verify Facebook link URL correctness
@@ -51,7 +51,7 @@ describe("social media links", () => {
 
 describe("navigation to Contact page", () => {
   beforeEach(() => {
-    cy.visit("https://airportlabs.com");
+    cy.visit('/');
     HomePage.elements.contactButtonNav().click();
     // cy.url().then((currentUrl) => {
     //   const expectedUrl = "https://airportlabs.com/other/get-in-touch";

@@ -1,7 +1,7 @@
-import HomePage from "../../pages/part1Pages/homePage";
+import HomePage from "../../pages/websitePages/homePage";
 
 beforeEach(() => {
-  cy.visit("https://airportlabs.com");
+  cy.visit('/');
 });
 
 describe("Section title test", () => {

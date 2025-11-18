@@ -1,10 +1,10 @@
-import ContactPage from "../../pages/part1Pages/contactPage";
+import ContactPage from "../../pages/websitePages/contactPage";
 
 // This test file is for the extra scenario, the contact page navigation from homepage works correctly (those tests are done in the home navigation test file) but here I will test for the content of the contact page itself like the data shown in the Office Locations section and the presence of the required attribute on the form fields to prevent empty submissions
 
 describe("contact form validation tests", () => {
   beforeEach(function () {
-    cy.visit("https://airportlabs.com/other/get-in-touch");
+    cy.visit('/other/get-in-touch');
   });
   it("should have correct section title on Contact page", () => {
     ContactPage.elements
@@ -20,7 +20,7 @@ describe("contact form validation tests", () => {
   //So I will skip that test for now and test for the correct data being shown in the Office Locations section instead as a placeholder for a more complex form submission test
   it("should have correct office location information", () => {
     ContactPage.elements.officeLocationsSection().should("be.visible");
-    cy.fixture("part1Fixtures/contact-page").then((data) => {
+    cy.fixture("websiteFixtures/contact-page").then((data) => {
       const locations = data.locations;
       ContactPage.elements
         .officeLocationsSection()
