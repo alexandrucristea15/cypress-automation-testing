@@ -1,9 +1,9 @@
-import HomePage from "../../pages/part1Pages/homePage";
+import HomePage from "../../pages/websitePages/homePage";
 
 describe("'Our Activity in Numbers' section tests", () => {
   beforeEach(function () {
-    cy.visit("https://airportlabs.com");
-    cy.fixture("part1Fixtures/home-content").then((content) => {
+    cy.visit("/");
+    cy.fixture("/websiteFixtures/home-content.json").then((content) => {
       this.content = content;
     });
   });
@@ -48,21 +48,21 @@ describe("'Our Activity in Numbers' section tests", () => {
       );
   });
   it("should have correct content in 'Our Activity in Numbers' section - spec 'Saas Products' ", () => {
-    cy.fixture("part1Fixtures/home-content").then((content) => {
+    cy.fixture("websiteFixtures/home-content").then((content) => {
       HomePage.elements
         .saaSProductsText()
         .should("contain.text", content.saaSProducts);
     });
   });
   it("should have correct content in 'Our Activity in Numbers' section - spec 'Airports Worldwide' ", () => {
-    cy.fixture("part1Fixtures/home-content").then((content) => {
+    cy.fixture("websiteFixtures/home-content").then((content) => {
       HomePage.elements
         .airportsWorldwideText()
         .should("contain.text", content.airportsWorldwide);
     });
   });
   it("should have correct content in 'Our Activity in Numbers' section - spec 'Users Worldwide' ", () => {
-    cy.fixture("part1Fixtures/home-content").then((content) => {
+    cy.fixture("websiteFixtures/home-content").then((content) => {
       HomePage.elements
         .usersWorldwideText()
         .should("contain.text", content.usersWorldwide);
