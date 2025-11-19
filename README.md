@@ -88,3 +88,5 @@ npx cypress run --spec "cypress/e2e/tests/shoppingWebsiteTests/product-selection
 - `BASE_URL` is mapped to Cypress `baseUrl` via `cypress.config.js`. Use `cy.visit('/')` to open the base site.
 - `CONTACT_URL` can be used directly with `cy.visit('/other/get-in-touch')` or `cy.visit(Cypress.env('CONTACT_URL'))`.
 - `SHOPPING_WEBSITE_URL` is consumed by the shopping page object and the custom command `cy.navigateToProducts`.
+
+## Author: Cristea Alexandru Paul
