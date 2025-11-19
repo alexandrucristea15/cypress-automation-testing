@@ -80,6 +80,7 @@ class productsPage {
   // // this method uses the URL contructor to build the new URL based on the current URL and the href attribute of the sort option, ensuring that it works correctly regardless of the current page structure.
 
   // Normally I wouldn't leave this many comments but I did it just for the reason of showing my thought process
+  // For the filter I observed that the data-availability attribute of 2 and 3 are in fact reserved for in stock or limited stock items so available ones while other numbers like 8 for out of stock or 9 for preorder are not of interest in this case
   selectFirstAvailableProduct() {
     return this.elements
       .products()
